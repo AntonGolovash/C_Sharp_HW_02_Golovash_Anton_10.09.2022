@@ -73,6 +73,21 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //5. Дана строка.
             //Подсчитать количество содержащихся в ней прописных латинских букв.
 
+            string str5 = "aAbcCdeEfgGhiIjkKlmMn";
+            char[] arr5 = str5.ToCharArray();
+
+            int number_of_uppercase_Latin_letters = 0;
+            for (int i = 0; i < arr5.Length; i++)
+            {
+                if (65 <= (int)(arr5[i]) && (int)(arr5[i]) <= 90)
+                {
+                    ++number_of_uppercase_Latin_letters;
+                }
+            }
+            Console.WriteLine($"Количество прописных латинских букв в строке - {number_of_uppercase_Latin_letters}");
+
+            Console.WriteLine();
+
             //6. Дана строка.
             //Подсчитать общее количество содержащихся в ней строчных латинских и русских букв.
 
