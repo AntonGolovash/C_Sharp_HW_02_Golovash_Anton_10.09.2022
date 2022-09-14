@@ -91,6 +91,30 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //6. Дана строка.
             //Подсчитать общее количество содержащихся в ней строчных латинских и русских букв.
 
+            string str6 = "asdfghjячсмитё";
+            char[] arr6 = str6.ToCharArray();
+
+            int number_of_lowercase_Latin_letters = 0;
+            int number_of_lowercase_Cyrillic_letters = 0;
+
+            for (int i = 0; i < arr6.Length; i++)
+            {
+                if (97 <= (int)(arr6[i]) && (int)(arr6[i]) <= 122)
+                {
+                    ++number_of_lowercase_Latin_letters;
+                }
+
+                if (1072 <= (int)(arr6[i]) && (int)(arr6[i]) <= 1103 || (int)(arr6[i]) == 1105)
+                {
+                    ++number_of_lowercase_Cyrillic_letters;
+                }
+            }
+            Console.WriteLine
+                ($"Общее количество содержащихся в строке прописных латинских и кириллических букв - " +
+                $"{number_of_lowercase_Latin_letters+number_of_lowercase_Cyrillic_letters}");
+
+            Console.WriteLine();
+
             //7. Дана строка.
             //Преобразовать в ней все прописные латинские буквы в строчные.
 
