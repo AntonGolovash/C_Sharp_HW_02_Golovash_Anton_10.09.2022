@@ -10,19 +10,18 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
     {
         static void Main(string[] args)
         {
-            //1. Дана строка. Вывести строку, содержащую те же символы,
-            //но расположенные в обратном порядке.
+            //1. Дана строка. Вывести строку, содержащую те же символы, но расположенные в обратном порядке.
             
             string str1 = "abcdefghijklmn";
-            str1.Reverse();
-
+            Console.WriteLine($"1. Дана строка {str1}.\nВывести строку, содержащую те же символы, но расположенные в обратном порядке.");
+            Console.WriteLine(str1.Reverse()); // не могу понять что здесь возвращает функция
             Console.WriteLine();
 
-            //2. Дана непустая строка S.
-            //Вывести строку, содержащую символы строки S,
-            //между которыми вставлено по одному пробелу.
+            //2. Дана строка.
+            //Вывести строку, содержащую символы данной строки, между которыми вставлено по одному пробелу.
 
             string str2 = "abcdefghijklmn";
+            Console.WriteLine($"2. Дана строка {str2}.\nВывести строку, содержащую символы данной строки, между которыми вставлено по одному пробелу.");
             char[] arr2 = str2.ToCharArray();
 
             for (int i = 0; i < arr2.Length; i++)
@@ -31,15 +30,15 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             }
 
             Console.WriteLine();
+            Console.WriteLine();
 
-            //3. Дана непустая строка S и целое число N(> 0).
-            //Вывести строку, содержащую символы строки S,
-            //между которыми вставлено по N символов «*» (звездочка).
+            //3. Дана строка и целое число N (> 0).
+            //Вывести строку, содержащую символы данной строки, между которыми вставлено по N символов «*» (звездочка).
 
             string str3 = "abcdefghijklmn";
-            char[] arr3 = str3.ToCharArray();
-
             const int N = 5;
+            Console.WriteLine($"3. Дана строка {str3} и целое число N = {N}. \nВывести строку, содержащую символы данной строки, между которыми вставлено по N символов «*» (звездочка).");
+            char[] arr3 = str3.ToCharArray();
 
             for (int i = 0; i < arr3.Length; i++)
             {
@@ -51,14 +50,16 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             }
 
             Console.WriteLine();
+            Console.WriteLine();
 
             //4. Дана строка.
             //Подсчитать количество содержащихся в ней цифр.
 
             string str4 = "a1bc2de3fg4hi5jk6lm7n";
+            Console.WriteLine($"4. Дана строка {str4}\nПодсчитать количество содержащихся в ней цифр.");
             char[] arr4 = str4.ToCharArray();
-
             int number_of_digits_in_string = 0;
+
             for (int i = 0; i < arr4.Length; i++)
             {
                 if (48 <= (int)(arr4[i]) && (int)(arr4[i]) <= 57)
@@ -66,17 +67,18 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
                     ++number_of_digits_in_string;
                 }
             }
-            Console.WriteLine($"Количество цифр в строке - {number_of_digits_in_string}");
 
+            Console.WriteLine($"Количество цифр в строке - {number_of_digits_in_string}");
             Console.WriteLine();
 
             //5. Дана строка.
             //Подсчитать количество содержащихся в ней прописных латинских букв.
 
             string str5 = "aAbcCdeEfgGhiIjkKlmMn";
+            Console.WriteLine($"5. Дана строка {str5}\nПодсчитать количество содержащихся в ней прописных латинских букв.");
             char[] arr5 = str5.ToCharArray();
-
             int number_of_uppercase_Latin_letters = 0;
+
             for (int i = 0; i < arr5.Length; i++)
             {
                 if (65 <= (int)(arr5[i]) && (int)(arr5[i]) <= 90)
@@ -84,16 +86,16 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
                     ++number_of_uppercase_Latin_letters;
                 }
             }
-            Console.WriteLine($"Количество прописных латинских букв в строке - {number_of_uppercase_Latin_letters}");
 
+            Console.WriteLine($"Количество прописных латинских букв в строке - {number_of_uppercase_Latin_letters}");
             Console.WriteLine();
 
             //6. Дана строка.
-            //Подсчитать общее количество содержащихся в ней строчных латинских и русских букв.
+            //Подсчитать общее количество содержащихся в ней строчных латинских и кириллических букв.
 
             string str6 = "asdfghjячсмитё";
+            Console.WriteLine($"6. Дана строка {str6}\nПодсчитать общее количество содержащихся в ней строчных латинских и кириллических букв.");
             char[] arr6 = str6.ToCharArray();
-
             int number_of_lowercase_Latin_letters = 0;
             int number_of_lowercase_Cyrillic_letters = 0;
 
@@ -109,21 +111,63 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
                     ++number_of_lowercase_Cyrillic_letters;
                 }
             }
-            Console.WriteLine
-                ($"Общее количество содержащихся в строке прописных латинских и кириллических букв - " +
-                $"{number_of_lowercase_Latin_letters+number_of_lowercase_Cyrillic_letters}");
+
+            Console.WriteLine($"Общее количество содержащихся в строке строчных латинских и кириллических букв - " +
+                $"{number_of_lowercase_Latin_letters + number_of_lowercase_Cyrillic_letters}");
 
             Console.WriteLine();
 
             //7. Дана строка.
             //Преобразовать в ней все прописные латинские буквы в строчные.
 
+            string str7 = "aAbcCdeEfgGhiIjkKlmMn";
+            Console.WriteLine($"7. Дана строка {str7}\nПреобразовать в ней все прописные латинские буквы в строчные.");
+            char[] arr7 = str7.ToCharArray();
+
+            for (int i = 0; i < arr7.Length; i++)
+            {
+                if (65 <= (int)(arr7[i]) && (int)(arr7[i]) <= 90)
+                {
+                    arr7[i] += (char)32;
+                }
+            }
+
+            Console.WriteLine("Строка с преобразованными в ней прописными латинскими буквами в строчные - ");
+            Console.WriteLine(arr7);
+            Console.WriteLine();
+
             //8. Дана строка.
-            //Преобразовать в ней все строчные буквы(как латинские, так и русские) в прописные.
+            //Преобразовать в ней все строчные буквы (как латинские, так и русские) в прописные.
+
+            string str8 = "aAsSdDfFgGhHjJяЯчЧсСмМиИтТёЁ";
+            Console.WriteLine($"8. Дана строка {str8}\nПреобразовать в ней все строчные буквы (как латинские, так и русские) в прописные.");
+            char[] arr8 = str8.ToCharArray();
+
+            for (int i = 0; i < arr8.Length; i++)
+            {
+                if (97 <= (int)(arr8[i]) && (int)(arr8[i]) <= 122)
+                {
+                    arr8[i] -= (char)32;
+                }
+
+                if (1072 <= (int)(arr8[i]) && (int)(arr8[i]) <= 1103)
+                {
+                    arr8[i] -= (char)32;
+                }
+
+                if ((int)(arr8[i]) == 1105)
+                {
+                    arr8[i] -= (char)80;
+                }
+
+            }
+
+            Console.WriteLine("Строка с преобразованными в ней прописными латинскими И кириллическими буквами в строчные - ");
+            Console.WriteLine(arr8);
+            Console.WriteLine();
 
             //9. Дана строка.
-            //Преобразовать в ней все строчные буквы(как латинские, так и русские) в прописные,
-            //а прописные - в строчные.
+            //Преобразовать в ней все строчные буквы(как латинские, так и русские) в прописные, а прописные - в строчные.
 
             //10. Дана строка.
             //Если она представляет собой запись целого числа, то вывести 1.
