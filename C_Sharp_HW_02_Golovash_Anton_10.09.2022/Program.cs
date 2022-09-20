@@ -243,15 +243,13 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             {
                 if (arr15[i] == CHAR15)
                 {
-                    arr151[arr151Iterator] = arr15[i];
-                    ++arr151Iterator;
-                    arr151[arr151Iterator] = CHAR15;
+                    arr151[arr151Iterator++] = arr15[i];
+                    arr151[arr151Iterator++] = CHAR15;
                 }
                 else
                 {
-                    arr151[arr151Iterator] = arr15[i];
+                    arr151[arr151Iterator++] = arr15[i];
                 }
-                ++arr151Iterator;
             }
             Console.WriteLine("15. Новая строка");
             Console.WriteLine(arr151);
@@ -275,25 +273,25 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
                     ++entry16;
                 }
             }
-            char[] resultArr = new char[str16.Length + (str161.Length * entry16)];
+            char[] resultArr16 = new char[str16.Length + (str161.Length * entry16)];
             int resultArrIterator = 0;
             for (int i = 0; i < arr16.Length; i++)
             {
-                if (arr15[i] == CHAR16)
+                if (arr16[i] == CHAR16)
                 {
-                    for (int j = 0; j < str161.Length; j++)
+                    for (int j = 0; j < arr161.Length; j++)
                     {
-                        resultArr[resultArrIterator++] = str161[j];
+                        resultArr16[resultArrIterator++] = arr161[j];
                     }
-                    resultArr[resultArrIterator++] = arr16[i];
+                    resultArr16[resultArrIterator++] = arr16[i];
                 }
                 else
                 {
-                    resultArr[resultArrIterator++] = arr16[i];
+                    resultArr16[resultArrIterator++] = arr16[i];
                 }
             }
             Console.WriteLine("16. Новая строка");
-            Console.WriteLine(resultArr);
+            Console.WriteLine(resultArr16);
             Console.WriteLine();
 
             //17. Дан символ С и строки S, S: После каждого вхождения символа С в строку S вставить строку S0.
