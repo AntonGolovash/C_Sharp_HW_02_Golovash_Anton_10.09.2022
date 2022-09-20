@@ -183,7 +183,6 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             Console.WriteLine((char)number11);
             Console.WriteLine();
 
-
             //12. Дано целое положительное число. Вывести символы, изображающие цифры этого числа(в порядке справа налево).
 
             //13. Дано целое число N(> 0) и строка S.
@@ -196,42 +195,67 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //14. Даны целые положительные числа N1 и N2 и строки S1 и S2.
             //Получить из этих строк новую строку, содержащую первые N1 символов строки S1
             //и последние N2 символов строки S2(в указанном порядке).
+            
             int firstCharacters = 5;
             int lastCharacters = 7;
-
             string str14 = "abcdefgh";
             string str141 = "opqrstuxyz";
-
             Console.WriteLine($"14. Даны целые положительные числа {firstCharacters} и {lastCharacters}\n" +
                 $"и строки {str14} и {str141}\n" +
                 $"Получить из этих строк новую строку, содержащую первые {firstCharacters} символов строки {str14}\n" +
                 $"и последние {lastCharacters} символов строки {str141} (в указанном порядке)");
             Console.WriteLine();
-
             char[] arr14 = str14.ToCharArray();
             char[] arr141 = str141.ToCharArray();
-
             char[] tempArr = new char[firstCharacters + lastCharacters];
-
             for (int i = 0; i < firstCharacters; i++)
             {
                 tempArr[i] = arr14[i];
             }
-
             int iterator = str141.Length - lastCharacters;
-
             for (int j = firstCharacters; j < tempArr.Length; j++)
             {
                 tempArr[j] = arr141[iterator];
                 ++iterator;
             }
-
-            Console.WriteLine($"{firstCharacters} первых символов первой строки и\n" +
+            Console.WriteLine($"14. {firstCharacters} первых символов первой строки и\n" +
                 $"{lastCharacters} последних символов второй строки образуют новую строку");
             Console.WriteLine(tempArr);
             Console.WriteLine();
 
-            //15. Дан символ С и строка 5. Удвоить каждое вхождение символа С в строку S
+            //15. Дан символ СHAR и строка str15. Удвоить каждое вхождение символа СHAR в строку str15.
+
+            const char CHAR = 'r';
+            string str15 = "orpqrsturxyrz";
+            Console.WriteLine($"15. Дан символ {CHAR} и строка {str15}. Удвоить каждое вхождение символа {CHAR} в строку {str15}.");
+            char[] arr15 = str15.ToCharArray();
+            int entry = 0;
+            for (int i = 0; i < str15.Length; i++)
+            {
+                if (str15[i] == CHAR)
+                {
+                    ++entry;
+                }
+            }
+            char[] arr151 = new char[str15.Length + entry];
+            int arr151Iterator = 0;
+            for (int i = 0; i < arr15.Length; i++)
+            {
+                if (arr15[i] == CHAR)
+                {
+                    arr151[arr151Iterator] = arr15[i];
+                    ++arr151Iterator;
+                    arr151[arr151Iterator] = CHAR;
+                }
+                else
+                {
+                    arr151[arr151Iterator] = arr15[i];
+                }
+                ++arr151Iterator;
+            }
+            Console.WriteLine("15. Новая строка");
+            Console.WriteLine(arr151);
+            Console.WriteLine();
 
             //16. Дан символ С и строки S, S0. Перед каждым вхождением символа С в строку S вставить строку S0
 
