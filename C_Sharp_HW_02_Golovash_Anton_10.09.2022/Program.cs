@@ -225,27 +225,27 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
 
             //15. Дан символ СHAR и строка str15. Удвоить каждое вхождение символа СHAR в строку str15.
 
-            const char CHAR = 'r';
+            const char CHAR15 = 'r';
             string str15 = "orpqrsturxyrz";
-            Console.WriteLine($"15. Дан символ {CHAR} и строка {str15}. Удвоить каждое вхождение символа {CHAR} в строку {str15}.");
+            Console.WriteLine($"15. Дан символ {CHAR15} и строка {str15}. Удвоить каждое вхождение символа {CHAR15} в строку {str15}.");
             char[] arr15 = str15.ToCharArray();
-            int entry = 0;
+            int entry15 = 0;
             for (int i = 0; i < str15.Length; i++)
             {
-                if (str15[i] == CHAR)
+                if (str15[i] == CHAR15)
                 {
-                    ++entry;
+                    ++entry15;
                 }
             }
-            char[] arr151 = new char[str15.Length + entry];
+            char[] arr151 = new char[str15.Length + entry15];
             int arr151Iterator = 0;
             for (int i = 0; i < arr15.Length; i++)
             {
-                if (arr15[i] == CHAR)
+                if (arr15[i] == CHAR15)
                 {
                     arr151[arr151Iterator] = arr15[i];
                     ++arr151Iterator;
-                    arr151[arr151Iterator] = CHAR;
+                    arr151[arr151Iterator] = CHAR15;
                 }
                 else
                 {
@@ -258,10 +258,47 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             Console.WriteLine();
 
             //16. Дан символ С и строки S, S0. Перед каждым вхождением символа С в строку S вставить строку S0
+               
+            const char CHAR16 = 'r';
+            string str16 = "orpqrsturxyrz";
+            string str161 = "AAA";
+
+            Console.WriteLine($"16. Дан символ {CHAR16} и строки {str16} и {str161}.\n" +
+                $"Перед каждым вхождением символа {CHAR16} в строку {str16} вставить строку {str161}");
+            char[] arr16 = str16.ToCharArray();
+            char[] arr161 = str161.ToCharArray();
+            int entry16 = 0;
+            for (int i = 0; i < str15.Length; i++)
+            {
+                if (str16[i] == CHAR16)
+                {
+                    ++entry16;
+                }
+            }
+            char[] resultArr = new char[str16.Length + (str161.Length * entry16)];
+            int resultArrIterator = 0;
+            for (int i = 0; i < arr16.Length; i++)
+            {
+                if (arr15[i] == CHAR16)
+                {
+                    for (int j = 0; j < str161.Length; j++)
+                    {
+                        resultArr[resultArrIterator++] = str161[j];
+                    }
+                    resultArr[resultArrIterator++] = arr16[i];
+                }
+                else
+                {
+                    resultArr[resultArrIterator++] = arr16[i];
+                }
+            }
+            Console.WriteLine("16. Новая строка");
+            Console.WriteLine(resultArr);
+            Console.WriteLine();
 
             //17. Дан символ С и строки S, S: После каждого вхождения символа С в строку S вставить строку S0.
 
-            //18. Даны строки S и So. Проверить, содержится ли строка 5, в строке S. Если содержится, то вывести Тгие, если не содержится, то вывести False
+            //18. Даны строки S и So. Проверить, содержится ли строка 5, в строке S. Если содержится, то вывести Тгuе, если не содержится, то вывести False
 
             //19. Даны строки S и So. Найти количество вхождений строки So в строку S.
 
