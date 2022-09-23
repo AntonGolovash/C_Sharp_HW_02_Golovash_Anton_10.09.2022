@@ -12,7 +12,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
         {
             //1. Дана строка. Вывести строку, содержащую те же символы, но расположенные в обратном порядке.
             
-            string str1 = "abcdefghijklmn";
+            const string str1 = "abcdefghijklmn";
             Console.WriteLine($"1. Дана строка {str1}.\nВывести строку, содержащую те же символы, но расположенные в обратном порядке.");
             Console.WriteLine(str1.Reverse()); // не могу понять что здесь возвращает функция
             Console.WriteLine();
@@ -20,7 +20,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //2. Дана строка.
             //Вывести строку, содержащую символы данной строки, между которыми вставлено по одному пробелу.
 
-            string str2 = "abcdefghijklmn";
+            const string str2 = "abcdefghijklmn";
             Console.WriteLine($"2. Дана строка {str2}.\nВывести строку, содержащую символы данной строки, между которыми вставлено по одному пробелу.");
             char[] arr2 = str2.ToCharArray();
 
@@ -35,7 +35,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //3. Дана строка и целое число N (> 0).
             //Вывести строку, содержащую символы данной строки, между которыми вставлено по N символов «*» (звездочка).
 
-            string str3 = "abcdefghijklmn";
+            const string str3 = "abcdefghijklmn";
             const int N = 5;
             Console.WriteLine($"3. Дана строка {str3} и целое число N = {N}. \nВывести строку, содержащую символы данной строки, между которыми вставлено по N символов «*» (звездочка).");
             char[] arr3 = str3.ToCharArray();
@@ -55,7 +55,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //4. Дана строка.
             //Подсчитать количество содержащихся в ней цифр.
 
-            string str4 = "a1bc2de3fg4hi5jk6lm7n";
+            const string str4 = "a1bc2de3fg4hi5jk6lm7n";
             Console.WriteLine($"4. Дана строка {str4}\nПодсчитать количество содержащихся в ней цифр.");
             char[] arr4 = str4.ToCharArray();
             int number_of_digits_in_string = 0;
@@ -74,7 +74,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //5. Дана строка.
             //Подсчитать количество содержащихся в ней прописных латинских букв.
 
-            string str5 = "aAbcCdeEfgGhiIjkKlmMn";
+            const string str5 = "aAbcCdeEfgGhiIjkKlmMn";
             Console.WriteLine($"5. Дана строка {str5}\nПодсчитать количество содержащихся в ней прописных латинских букв.");
             char[] arr5 = str5.ToCharArray();
             int number_of_uppercase_Latin_letters = 0;
@@ -93,7 +93,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //6. Дана строка.
             //Подсчитать общее количество содержащихся в ней строчных латинских и кириллических букв.
 
-            string str6 = "asdfghjячсмитё";
+            const string str6 = "asdfghjячсмитё";
             Console.WriteLine($"6. Дана строка {str6}\nПодсчитать общее количество содержащихся в ней строчных латинских и кириллических букв.");
             char[] arr6 = str6.ToCharArray();
             int number_of_lowercase_Latin_letters = 0;
@@ -120,7 +120,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //7. Дана строка.
             //Преобразовать в ней все прописные латинские буквы в строчные.
 
-            string str7 = "aAbcCdeEfgGhiIjkKlmMn";
+            const string str7 = "aAbcCdeEfgGhiIjkKlmMn";
             Console.WriteLine($"7. Дана строка {str7}\nПреобразовать в ней все прописные латинские буквы в строчные.");
             char[] arr7 = str7.ToCharArray();
 
@@ -139,7 +139,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //8. Дана строка.
             //Преобразовать в ней все строчные буквы (как латинские, так и русские) в прописные.
 
-            string str8 = "aAsSdDfFgGhHjJяЯчЧсСмМиИтТёЁ";
+            const string str8 = "aAsSdDfFgGhHjJяЯчЧсСмМиИтТёЁ";
             Console.WriteLine($"8. Дана строка {str8}\nПреобразовать в ней все строчные буквы (как латинские, так и русские) в прописные.");
             char[] arr8 = str8.ToCharArray();
 
@@ -198,8 +198,8 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             
             int firstCharacters = 5;
             int lastCharacters = 7;
-            string str14 = "abcdefgh";
-            string str141 = "opqrstuxyz";
+            const string str14 = "abcdefgh";
+            const string str141 = "opqrstuxyz";
             Console.WriteLine($"14. Даны целые положительные числа {firstCharacters} и {lastCharacters}\n" +
                 $"и строки {str14} и {str141}\n" +
                 $"Получить из этих строк новую строку, содержащую первые {firstCharacters} символов строки {str14}\n" +
@@ -226,7 +226,7 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //15. Дан символ СHAR и строка str15. Удвоить каждое вхождение символа СHAR в строку str15.
 
             const char CHAR15 = 'r';
-            string str15 = "orpqrsturxyrz";
+            const string str15 = "orpqrsturxyrz";
             Console.WriteLine($"15. Дан символ {CHAR15} и строка {str15}. Удвоить каждое вхождение символа {CHAR15} в строку {str15}.");
             char[] arr15 = str15.ToCharArray();
             int entry15 = 0;
@@ -258,15 +258,14 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
             //16. Дан символ С и строки S, S0. Перед каждым вхождением символа С в строку S вставить строку S0
                
             const char CHAR16 = 'r';
-            string str16 = "orpqrsturxyrz";
-            string str161 = "AAA";
-
+            const string str16 = "orpqrsturxyrz";
+            const string str161 = "AAA";
             Console.WriteLine($"16. Дан символ {CHAR16} и строки {str16} и {str161}.\n" +
                 $"Перед каждым вхождением символа {CHAR16} в строку {str16} вставить строку {str161}");
             char[] arr16 = str16.ToCharArray();
             char[] arr161 = str161.ToCharArray();
             int entry16 = 0;
-            for (int i = 0; i < str15.Length; i++)
+            for (int i = 0; i < str16.Length; i++)
             {
                 if (str16[i] == CHAR16)
                 {
@@ -274,20 +273,20 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
                 }
             }
             char[] resultArr16 = new char[str16.Length + (str161.Length * entry16)];
-            int resultArrIterator = 0;
+            int Iterator16 = 0;
             for (int i = 0; i < arr16.Length; i++)
             {
                 if (arr16[i] == CHAR16)
                 {
                     for (int j = 0; j < arr161.Length; j++)
                     {
-                        resultArr16[resultArrIterator++] = arr161[j];
+                        resultArr16[Iterator16++] = arr161[j];
                     }
-                    resultArr16[resultArrIterator++] = arr16[i];
+                    resultArr16[Iterator16++] = arr16[i];
                 }
                 else
                 {
-                    resultArr16[resultArrIterator++] = arr16[i];
+                    resultArr16[Iterator16++] = arr16[i];
                 }
             }
             Console.WriteLine("16. Новая строка");
@@ -296,15 +295,55 @@ namespace C_Sharp_HW_02_Golovash_Anton_10._09._2022
 
             //17. Дан символ С и строки S, S: После каждого вхождения символа С в строку S вставить строку S0.
 
-            //18. Даны строки S и So. Проверить, содержится ли строка 5, в строке S. Если содержится, то вывести Тгuе, если не содержится, то вывести False
+            const char CHAR17 = 'r';
+            const string str17 = "orpqrsturxyrz";
+            const string str171 = "AAA";
+            Console.WriteLine($"17. Дан символ {CHAR17} и строки {str17} и {str171}.\n" +
+                $"После каждого вхождением символа {CHAR17} в строку {str17} вставить строку {str171}");
+            char[] arr17 = str17.ToCharArray();
+            char[] arr171 = str171.ToCharArray();
+            int entry17 = 0;
+            for (int i = 0; i < str17.Length; i++)
+            {
+                if (str17[i] == CHAR17)
+                {
+                    ++entry17;
+                }
+            }
+            char[] resultArr17 = new char[str17.Length + (str171.Length * entry17)];
+            int Iterator = 0;
+            for (int i = 0; i < arr17.Length; i++)
+            {
+                if (arr17[i] == CHAR17)
+                {
+                    resultArr17[Iterator++] = arr17[i];
+                    for (int j = 0; j < arr171.Length; j++)
+                    {
+                        resultArr17[Iterator++] = arr171[j];
+                    }
+                }
+                else
+                {
+                    resultArr17[Iterator++] = arr17[i];
+                }
+            }
+            Console.WriteLine("17. Новая строка");
+            Console.WriteLine(resultArr17);
+            Console.WriteLine();
+
+            //18. Даны строки S и So. Проверить, содержится ли строка S, в строке So.
+            //Если содержится, то вывести Тгuе, если не содержится, то вывести False
 
             //19. Даны строки S и So. Найти количество вхождений строки So в строку S.
 
-            //20. Даны строки S и So. Удалить из строки S первую подстроку, совпадающую с So: Если совпадающих подстрок нет, то вывести строку S без изменений
+            //20. Даны строки S и So. Удалить из строки S первую подстроку, совпадающую с So:
+            //Если совпадающих подстрок нет, то вывести строку S без изменений
 
-            //21. Даны строки S и So. Удалить из строки S последнюю подстроку, совпадающую с So. Если совпадающих подстрок нет, то вывести строку S без изменений.
+            //21. Даны строки S и So. Удалить из строки S последнюю подстроку, совпадающую с So.
+            //Если совпадающих подстрок нет, то вывести строку S без изменений.
 
-            //22. Даны строки S и So. Удалить из строки S все подстроки, совпадающие с S0. Если совпадающих подстрок нет, то вывести строку S без изменений.
+            //22. Даны строки S и So. Удалить из строки S все подстроки, совпадающие с S0.
+            //Если совпадающих подстрок нет, то вывести строку S без изменений.
 
             //23. Даны строки S, S и S. Заменить в строке S первое вхождение строки S, на строку S2.
 
